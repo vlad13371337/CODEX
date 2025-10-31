@@ -1,0 +1,109 @@
+.categories {
+  padding: 4rem 4vw;
+}
+
+.categories__intro {
+  max-width: 680px;
+  margin-bottom: 3rem;
+}
+
+.categories__intro h2 {
+  font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+  margin-bottom: 1rem;
+}
+
+.categories__intro p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a4e69;
+}
+
+.categories__tag {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(144, 137, 252, 0.18);
+  color: #2f195f;
+  margin-bottom: 1rem;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.75rem;
+}
+
+.category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 40px rgba(82, 52, 163, 0.1);
+  border: 1px solid rgba(82, 52, 163, 0.08);
+}
+
+.category-card::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+}
+
+.category-card__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: color-mix(in srgb, var(--accent) 20%, white);
+  color: #2b0d3a;
+}
+
+.category-card__description {
+  margin: 0;
+  color: #3c2f55;
+  line-height: 1.6;
+}
+
+.category-card__flavors {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #5f0f40;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.category-card__cta {
+  align-self: flex-start;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: color-mix(in srgb, var(--accent) 55%, white 45%);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.category-card__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+@media (max-width: 600px) {
+  .category-card {
+    padding: 1.5rem;
+  }
+}
